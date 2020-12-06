@@ -1,0 +1,49 @@
+version: '3'
+services:
+  single-spa:
+    build: ../sample-single-spa
+    image: single-spa
+    ports:
+      - "5001:80"
+  sample-vue:
+    build: ../sample-vue
+    image: sample-vue
+    ports:
+      - "5000:81"
+  sample-react:
+    build: ../sample-react
+    image: sample-react
+    ports:
+      - "5002:82"
+  sample-vue-parcel:
+    build: ../sample-vue-parcel
+    image: sample-vue-parcel
+    ports:
+      - "5003:83"
+  sample-react-parcel:
+    build: ../sample-react-parcel
+    image: sample-react-parcel
+    ports:
+      - "5004:84"
+  sample-api:
+    build: ../sample-api
+    image: sample-api
+    environment:
+      - DB=mongodb://mongo:27017
+      - DB_name=test
+      - NODE_ENV=production
+    ports: 
+      - "8080:3005"
+  sample-api2:
+    build: ../sample-api2
+    image: sample-api2
+    environment:
+      - DB=mongodb://mongo:27017
+      - DB_name=test2
+      - NODE_ENV=production
+    ports: 
+      - "8081:3006"
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
