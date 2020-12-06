@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 
 // Type 1 import
-// const RemoteNavFromNext = React.lazy(() => import("app1/nav"));
+const RemoteNavFromNext = React.lazy(() => import("app1/nav"));
 
 // Type 2 import
-const RemoteNavFromNext = (import("app1/nav"));
+// const RemoteNavFromNext = (import("app1/nav"));
 
 // Type 3 import
 // let RemoteNavFromNext = null;
@@ -42,11 +42,13 @@ const AnimationExample = () => {
     <div>
       Load a lazy Comp from NextJS Module
       <input type="button" value="Show/hide imported button" onClick={() => setShowButton(!showButton)} />
-      {/* {showButton && 
+      {showButton && 
       <React.Suspense fallback="Loading Button">
         <RemoteNavFromNext />
       </React.Suspense>
-      } */}
+      }
+      {/* <RemoteNavFromNext /> */}
+
     </div>
 
     
