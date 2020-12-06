@@ -48,6 +48,7 @@ module.exports = {
             remotes: {
             //   app3: "app3@http://localhost:3003/remoteEntry.js",
               app1: "app1@http://localhost:3000/_next/static/remoteEntryMerged.js",
+              sidecar: "sidecar@http://localhost:8080/remoteEntry.js",
             //   next1: "next1@http://localhost:3002/_next/static/runtime/remoteEntry.js",
               // nav: "nav@http://localhost:3003/remoteEntry.js",
             },

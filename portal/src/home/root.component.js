@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 // Type 1 import
-const RemoteNavFromNext = React.lazy(() => import("app1/nav"));
+const RemoteNavFromNext = React.lazy(() => import("sidecar/nav"));
 
 // Type 2 import
 // const RemoteNavFromNext = (import("app1/nav"));

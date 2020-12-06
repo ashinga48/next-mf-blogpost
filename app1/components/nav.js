@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 
 const Nav = () => {
 
-  // useEffect(() => {
-  //   console.log(' HOOK WORKS ...... ');
-  // }, [])
+  useEffect(() => {
+    console.log(' HOOK WORKS ...... ');
+  }, [])
 
   return (
     <nav
